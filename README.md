@@ -1,2 +1,0 @@
-# Flix
-movie browsing app
