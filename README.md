@@ -19,8 +19,12 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 
-iPhone 14 pro max <img src="https://im4.ezgif.com/tmp/ezgif-4-4aa852775e.gif" width=250><br>
-iPhone 8 <img src="https://im4.ezgif.com/tmp/ezgif-4-950a0736c5.gif" width=250><br>
+iPhone 14 pro max 
+![](https://i.imgur.com/erO0bro.gif)
+
+iPhone 8 
+![](https://i.imgur.com/sNIsUJ3.gif)
+
 
 ### Notes
 My app failed to run after I moved the folder into the desktop repository. It took me a while to figure out that I need to download all the libraries using CocoaPods again.
