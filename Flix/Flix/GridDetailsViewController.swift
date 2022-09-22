@@ -1,31 +1,24 @@
 //
-//  MovieDetailsViewController.swift
+//  GridDetailsViewController.swift
 //  Flix
 //
-//  Created by rodeo station on 9/20/22.
+//  Created by rodeo station on 9/22/22.
 //
 
 import UIKit
-import AlamofireImage
 
-class MovieDetailsViewController: UIViewController {
-
+class GridDetailsViewController: UIViewController {
     var movie:[String:Any]!
     
     @IBOutlet weak var backdropView: UIImageView!
-    
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         titleLabel.text=movie["title"] as? String
-  
         synopsisLabel.text=movie["overview"] as? String
-        
         
         let baseUrl="https://image.tmdb.org/t/p/w185"
         
@@ -44,8 +37,6 @@ class MovieDetailsViewController: UIViewController {
         else {
            backdropView.image = nil
         }
-
-        
     }
     
 
