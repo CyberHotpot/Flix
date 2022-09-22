@@ -19,7 +19,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         tableView.dataSource=self
         tableView.delegate=self
-        tableView.rowHeight = 150
+        tableView.rowHeight = 166
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -66,6 +66,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.synopsisLabel.text=synopsis
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //find the selected movie
+        let cell=sender as! UITableViewCell
+        let indexPath=tableView.indexPath(for: cell)!
+        let movie=movies[indexPath.row]
+        
+        //pass the select movie to the details view controller
+        let detailsViewController=segue.destination as! MovieDetailsViewController
+        detailsViewController.movie=movie
+        tableView.deselectRow(at:indexPath, animated: true)
     }
 
 }
