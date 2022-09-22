@@ -17,13 +17,13 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 
-![](https://i.imgur.com/NAniWD1.gif)
+![](https://i.imgur.com/66M5GIb.gif)
 
-<img src="https://i.imgur.com/NAniWD1.gif" width=250><br>
+
+<img src="https://i.imgur.com/66M5GIb.gif" width=250><br>
 
 ### Notes
 One error message that I received more than once is "this class is not key value coding-compliant for the key XXX". This error often results from a bad connection. For example, we may delete or rename an outlet property in the controller file but there is still an unbroken connection between the storyboard and something that no longer exists in the code. However, sometimes even if my connections are all properly established, I still encounter the same error. What always works for me in this case is to check if the "Inherit Module From Target" option is checked. 
-![](https://i.imgur.com/NAniWD1.gif)
 
 ---
 
