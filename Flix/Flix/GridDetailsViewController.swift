@@ -17,6 +17,11 @@ class GridDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        posterView.layer.masksToBounds = true
+        posterView.layer.borderWidth = 1.5
+        posterView.layer.borderColor = UIColor.black.cgColor
+        
         titleLabel.text=movie["title"] as? String
         synopsisLabel.text=movie["overview"] as? String
         

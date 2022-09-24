@@ -21,7 +21,10 @@ class MovieDetailsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        posterView.layer.masksToBounds = true
+        posterView.layer.borderWidth = 1.5
+        posterView.layer.borderColor = UIColor.white.cgColor
+        
         titleLabel.text=movie["title"] as? String
   
         synopsisLabel.text=movie["overview"] as? String
@@ -44,19 +47,23 @@ class MovieDetailsViewController: UIViewController {
         else {
            backdropView.image = nil
         }
-
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTap))
+        posterView.isUserInteractionEnabled = true
+        posterView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTap() {
+
+        self.performSegue(withIdentifier: "modalSegue", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+        let TrailerViewController=segue.destination as! TrailerViewController
+        TrailerViewController.movie=movie
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
