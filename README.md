@@ -17,9 +17,9 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 
-![](https://i.imgur.com/4uhqmdA.gif)
+Required: ![](https://i.imgur.com/4uhqmdA.gif)
 
-![](https://i.imgur.com/hPBvyAN.gif)
+Bonus: ![](https://i.imgur.com/hPBvyAN.gif)
 
 
 ### Notes
@@ -47,7 +47,6 @@ iPhone 14 pro max
 
 iPhone 8 
 ![](https://i.imgur.com/sNIsUJ3.gif)
-<img src="https://i.imgur.com/sNIsUJ3.gif", width=250 />
 
 
 ### Notes
