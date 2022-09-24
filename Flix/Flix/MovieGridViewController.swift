@@ -21,15 +21,14 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource,UICol
         collectionView.delegate=self
         collectionView.dataSource=self
         
+        //customize collectionView layout
         let layout=collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        
         layout.minimumLineSpacing=0
         layout.minimumInteritemSpacing=0
-        
         let width=view.frame.size.width/3 //width of the device
         layout.itemSize=CGSize(width:width,height:(width-2*layout.minimumInteritemSpacing)*3/2)
         
-        // Do any additional setup after loading the view.
+        //API request
         let url = URL(string: "https://api.themoviedb.org/3/movie/634649/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -38,19 +37,12 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource,UICol
              if let error = error {
                     print(error.localizedDescription)
              } else if let data = data {
-                    // Convert JSON
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    // Store the movies in an array
                     self.movies=dataDictionary["results"] as! [[String:Any]]
-                    // Reload table view data
-              
-                 self.collectionView.reloadData()
-                    //self.tableView.reloadData()
+                    self.collectionView.reloadData()
              }
         }
         task.resume()
-
-
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

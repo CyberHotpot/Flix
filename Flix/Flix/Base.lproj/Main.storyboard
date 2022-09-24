@@ -165,21 +165,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFJ-YR-JRT">
-                                <rect key="frame" x="20" y="30" width="80" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFJ-YR-JRT">
+                                <rect key="frame" x="15" y="46" width="80" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JDi-Ox-fsy"/>
                                     <constraint firstAttribute="width" constant="80" id="uVj-cW-YO7"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel" buttonSize="medium">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="didPress:" destination="bd2-0A-uug" eventType="touchUpInside" id="yTO-6V-cK9"/>
                                 </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hti-OR-XaN">
-                                <rect key="frame" x="0.0" y="250" width="414" height="233"/>
+                                <rect key="frame" x="0.0" y="331.5" width="414" height="233"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -191,17 +193,17 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Hti-OR-XaN" firstAttribute="centerX" secondItem="MJ4-Fi-D3i" secondAttribute="centerX" id="0yA-d9-QuT"/>
+                            <constraint firstItem="Hti-OR-XaN" firstAttribute="centerY" secondItem="MJ4-Fi-D3i" secondAttribute="centerY" id="5p7-pX-Jwa"/>
                             <constraint firstItem="Hti-OR-XaN" firstAttribute="leading" secondItem="3tg-4J-Ew3" secondAttribute="leading" id="8Fg-vf-E8I"/>
                             <constraint firstItem="3tg-4J-Ew3" firstAttribute="trailing" secondItem="Hti-OR-XaN" secondAttribute="trailing" id="L6f-OQ-U7q"/>
                             <constraint firstItem="Hti-OR-XaN" firstAttribute="height" secondItem="MJ4-Fi-D3i" secondAttribute="width" multiplier="9:16" id="OfF-IB-CKv"/>
-                            <constraint firstItem="ZFJ-YR-JRT" firstAttribute="top" secondItem="MJ4-Fi-D3i" secondAttribute="top" constant="30" id="i5c-HK-BF8"/>
-                            <constraint firstItem="Hti-OR-XaN" firstAttribute="top" secondItem="MJ4-Fi-D3i" secondAttribute="top" constant="250" id="iV6-I4-vDH"/>
-                            <constraint firstItem="ZFJ-YR-JRT" firstAttribute="leading" secondItem="3tg-4J-Ew3" secondAttribute="leading" constant="20" id="wSI-3N-Gcl"/>
+                            <constraint firstItem="ZFJ-YR-JRT" firstAttribute="top" secondItem="3tg-4J-Ew3" secondAttribute="top" constant="2" id="i5c-HK-BF8"/>
+                            <constraint firstItem="ZFJ-YR-JRT" firstAttribute="leading" secondItem="3tg-4J-Ew3" secondAttribute="leading" constant="15" id="wSI-3N-Gcl"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="movieView" destination="Hti-OR-XaN" id="09t-It-sKW"/>
-                        <outlet property="returnButton" destination="ZFJ-YR-JRT" id="mXo-XM-1gi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGA-ck-FJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -267,8 +269,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="201" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nd2-7e-OWC">
-                                            <rect key="frame" x="0.0" y="0.0" width="193" height="184"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nd2-7e-OWC">
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="192"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>

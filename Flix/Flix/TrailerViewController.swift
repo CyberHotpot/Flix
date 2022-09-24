@@ -11,16 +11,15 @@ import WebKit
 class TrailerViewController: UIViewController {
     
     var movie:[String:Any]!
-    var id:Int!
+    var movieId:Int!
 
     @IBOutlet weak var movieView: WKWebView!
-    
-    @IBOutlet weak var returnButton: UIButton!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        if let id=movie["id"] as? Int{
+        
+        if let id=movieId{
             
             let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US")!
             let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
